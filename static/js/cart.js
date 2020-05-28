@@ -36,7 +36,7 @@ function updateUserOrder(productId, action){
         location.reload()
     });
 }
-unction addCookieItem(productId, action){
+function addCookieItem(productId, action){
 	console.log('User is not authenticated')
 
 	if (action == 'add'){
