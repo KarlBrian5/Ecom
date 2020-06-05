@@ -8,8 +8,8 @@ def cookieCart(request):
         cart = json.loads(request.COOKIES['cart'])
     except:
         cart = {}
-        print('CART:', cart)
 
+        print('Cart:', cart)
     items = []
     order = {'get_cart_total': 0, 'get_cart_items': 0, 'shipping': False}
     cartItems = order['get_cart_items']
@@ -17,19 +17,22 @@ def cookieCart(request):
     for i in cart:
         # We use try block to prevent items in cart that may have been removed from causing error
         try:
-            cartItems += cart[i]['quantity']
+            cartItems += cart[i]["quantity"]
 
             product = Product.objects.get(id=i)
-            total = (product.price * cart[i]['quantity'])
+            total = (product.price * cart[i]["quantity"])
 
             order['get_cart_total'] += total
-            order['get_cart_items'] += cart[i]['quantity']
+            order['get_cart_items'] += cart[i]["quantity"]
 
             item = {
-                'id': product.id,
-                'product': {'id': product.id, 'name': product.name, 'price': product.price,
-                            'imageURL': product.imageURL}, 'quantity': cart[i]['quantity'],
-                'digital': product.digital, 'get_total': total,
+                'product': {'id': product.id,
+                            'name': product.name,
+                            'price': product.price,
+                            'imageURL': product.imageURL
+                            },
+                'quantity': cart[i]["quantity"],
+                'get_total': total,
             }
             items.append(item)
 
@@ -82,4 +85,3 @@ def guestOrder(request, data):
             quantity=item['quantity'],
         )
     return customer, order
-
