@@ -1,5 +1,5 @@
 body {
-    background-color: lightyellow;
+    background-color: #e4f5ff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-dark {
-    background-color: green !important;
+    background-color: #094f6e;
 }
 
 #cart-icon {
@@ -96,17 +96,4 @@ h1, h2, h3, h4, h5, h6 {
 
 .hidden {
     display: none !important;
-}
-
-div.searchbtn2 {
-   display: block;
-    text-align: center;
-
-}
-form{
-    display:inline-block;
-    margin-left: 40%;
-    margin-right: 40%;
-    width: 50%;
-    text-align: left;
 }
