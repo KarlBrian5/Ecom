@@ -66,8 +66,8 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'store' %}">Makeover Palace</a>
+<nav class="navbar  navbar_bar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+    <a style="font-size:33px; color: #ffae00" class="navbar-brand" href="/"><strong><strong>Ma₹ket</strong></strong></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -81,27 +81,38 @@
 
         </ul>
         <form class="form-inline mr-auto my-lg-0" method="get">
-                          <!--<input class="form-control mr-sm-2" style="width:1000px; height:38px;" type="text" placeholder="Search for items" aria-label="Search">-->
-                            <input type="text" name="name" placeholder="Search for products" class="form-control" size="80" id="id_name">
-                          <button class="btn btn-outline-warning btn-rounded btn-sm ml-2 my-2 my-sm-0" style="width:58px; height:35px" type="submit">Search</button>
-                          </form>
-            <a href="{% url 'login' %}" class="btn btn-warning">Login</a>
+            <!--<input class="form-control mr-sm-2" style="width:1000px; height:38px;" type="text" placeholder="Search for items" aria-label="Search">-->
+            <input type="text" name="name" placeholder="Search for products" class="form-control" size="70"
+                   id="id_name">
+            <button class="btn btn-outline-warning btn-rounded btn-sm ml-2 my-2 my-sm-0" style="width:58px; height:35px"
+                    type="submit">Search
+            </button>
+        </form>
+        <a href="{% url 'login' %}" class="btn btn-warning">Login</a>
 
-            <a href="{% url 'cart' %}">
-                <img id="cart-icon" src="{% static 'images/cart.png' %}">
-            </a>
-            <p id="cart-total">{{cartItems}}</p>
+        <a href="{% url 'cart' %}">
+            <img id="cart-icon" src="{% static 'images/cart.png' %}">
+        </a>
+        <p id="cart-total">{{cartItems}}</p>
 
-        </div>
     </div>
 </nav>
-<div class="container">
+<hr>
+<div class="container" id="body_div">
     <br>
     {% block content %}
 
 
     {% endblock content %}
 </div>
+
+
+<!-- jQuery !-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!-- jQuery UI !-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
