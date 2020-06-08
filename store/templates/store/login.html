@@ -20,19 +20,19 @@
 			font-family: sans-serif;
 		}
 		.user_card {
-			width: 350px;
+			width: device-width;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #74cfbf;
+			background: #ffffffad;
 			position: relative;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
-			padding: 10px;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			padding: 25px;
+			box-shadow: 0 4px 8px 0 rgba(0, 255, 179, 0.007), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
+			border-radius: 20px;
 
 		}
 
@@ -41,7 +41,7 @@
 		}
 
 		#form-title{
-			color: #fff;
+			color: rgb(0, 0, 0) !important;
 
 		}
 
@@ -50,6 +50,7 @@
 			background: #33ccff !important;
 			color: white !important;
 		}
+
 		.login_btn:focus {
 			box-shadow: none !important;
 			outline: 0px !important;
@@ -75,6 +76,12 @@
 			padding: 10px;
 			margin-top: 10px;
 		}
+		h5 {
+            background-color: #04ff9600;
+            color: rgb(0, 0, 0);
+            font-size: 110%;
+        }
+
 	</style>
 
 </head>
@@ -115,7 +122,7 @@
 
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
+						<h5>Don't have an account? </h5><a href="{% url 'register' %}" class="ml-2">Sign Up</a>
 					</div>
 
 				</div>

@@ -17,19 +17,19 @@
 			background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("/static/images/login.jpg");
 		}
 		.user_card {
-			width: 350px;
+			width: device-width;
 			margin-top: auto;
 			margin-bottom: auto;
-			background: #74cfbf;
+			background: #ffffffad;
 			position: relative;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
-			padding: 10px;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			padding: 25px;
+			box-shadow: 0 4px 8px 0 rgba(0, 255, 179, 0.007), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
+			border-radius: 20px;
 
 		}
 
@@ -38,7 +38,7 @@
 		}
 
 		#form-title{
-			color: #fff;
+			color: rgb(0, 0, 0) !important;
 		}
 		.login_btn {
 			width: 100%;
@@ -63,6 +63,12 @@
 			box-shadow: none !important;
 			outline: 0px !important;
 		}
+		h5 {
+            background-color: #04ff9600;
+            color: rgb(0, 0, 0);
+            font-size: 110%;
+        }
+
 
 	</style>
 
@@ -113,7 +119,7 @@
 
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
+						<h5>Already have an account?</h5> <a href="{% url 'login' %}" class="ml-2">Login</a>
 					</div>
 				</div>
 			</div>
